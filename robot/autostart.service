@@ -1,0 +1,14 @@
+[Unit]
+Description=SKYNET
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+# /etc/systemd/system/
+# sudo systemctl enable autostart.service
+# sudo systemctl start autostart.service
+#ExecStart=/usr/bin/python3 /home/pi/robot/demon_starter.py
+ExecStart=/usr/bin/python3 /home/pi/robot/demon_bootloader.py
+
+[Install]
+WantedBy=multi-user.target
